@@ -1,0 +1,158 @@
+/* Extends style.css with resume-sheet specific rules */
+
+.cv-sheet{
+  padding-top: clamp(2.5rem, 6vw, 4rem);
+  padding-bottom: 5rem;
+  max-width: 780px;
+}
+
+.cv-block{
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.cv-block:last-of-type{
+  border-bottom: none;
+}
+
+.cv-identity{
+  padding-bottom: 2rem;
+}
+
+.cv-name{
+  font-size: clamp(1.9rem, 5vw, 2.6rem);
+  font-weight: 600;
+}
+
+.cv-role{
+  font-family: var(--font-mono);
+  color: var(--cyan);
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.cv-contact-line{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.2rem;
+  margin-top: 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-dim);
+}
+
+.cv-contact-line li::after{
+  content: '';
+}
+
+.cv-profile{
+  max-width: 65ch;
+  color: var(--ink-dim);
+}
+
+.cv-entry{
+  margin-bottom: 1.75rem;
+}
+
+.cv-entry:last-child{ margin-bottom: 0; }
+
+.cv-entry-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cv-entry-title{
+  font-size: 1.1rem;
+}
+
+.cv-entry-date{
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-dim);
+  white-space: nowrap;
+}
+
+.cv-entry-org{
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--amber);
+  margin: 0.35rem 0 0.75rem;
+}
+
+.cv-entry-points{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cv-entry-points li{
+  position: relative;
+  padding-left: 1rem;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.cv-entry-points li::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border: 1px solid var(--cyan);
+  transform: rotate(45deg);
+}
+
+.cv-skill-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.75rem;
+}
+
+.cv-skill-line{
+  color: var(--ink-dim);
+  font-size: 0.92rem;
+  margin-top: 0.5rem;
+}
+
+.cv-project-list{
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.cv-project-list li{
+  font-size: 0.95rem;
+  color: var(--ink-dim);
+}
+
+.cv-project-list strong{
+  color: var(--ink);
+}
+
+.cv-portfolio-pointer{
+  margin-top: 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.cv-portfolio-pointer a{
+  color: var(--cyan);
+  border-bottom: 1px solid var(--cyan);
+}
+
+/* Print styles: strip the dark theme for a clean, ink-friendly PDF */
+@media print{
+  .grid-overlay, .site-header, .site-footer{ display: none; }
+  body{ background: #fff; color: #111; }
+  .cv-sheet{ max-width: 100%; padding: 0; }
+  .section-label{ color: #b5651d; }
+  .cv-role, .cv-entry-org{ color: #333; }
+  .cv-profile, .cv-skill-line, .cv-project-list li, .cv-entry-date, .cv-contact-line{ color: #444; }
+  .cv-block{ border-color: #ddd; break-inside: avoid; }
+  .cv-entry-points li::before{ border-color: #b5651d; }
+}

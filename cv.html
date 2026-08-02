@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paweł — CV / 3D Artist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="cv.css">
+</head>
+<body class="cv-page">
+
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<header class="site-header">
+  <nav class="nav">
+    <span class="nav-mark">PW / CV</span>
+    <ul class="nav-links">
+      <li><a href="index.html">← Portfolio</a></li>
+      <li><a href="#" id="print-btn">Print / Save as PDF</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="cv-sheet">
+
+  <!-- HEADER -->
+  <section class="cv-block cv-identity">
+    <h1 class="cv-name">Paweł [Last Name]</h1>
+    <p class="cv-role">3D Artist &amp; UE5 Blueprint Developer</p>
+    <ul class="cv-contact-line">
+      <li>Gdańsk, Poland</li>
+      <li>[you@example.com]</li>
+      <li>[linkedin.com/in/yourname]</li>
+      <li>[artstation.com/yourname]</li>
+      <li>[github.com/yourname]</li>
+    </ul>
+  </section>
+
+  <!-- PROFILE -->
+  <section class="cv-block">
+    <p class="section-label">FIG. 01 — PROFILE</p>
+    <p class="cv-profile">
+      3D Artist and UE5 Blueprint Developer with a background spanning modeling,
+      texturing and gameplay systems. MSc candidate in Game Design &amp; 3D Animation
+      at DSW Wrocław, holding a completed BSc in Computer Games Development from
+      PJAIT. Comfortable owning an asset from block-out through PBR texturing to a
+      wired-up, playable result in Unreal Engine 5. [Replace with 2–3 sentences on
+      what you want an employer to take away first.]
+    </p>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="cv-block">
+    <p class="section-label">FIG. 02 — EXPERIENCE</p>
+
+    <article class="cv-entry">
+      <div class="cv-entry-head">
+        <h3 class="cv-entry-title">[Role Title]</h3>
+        <span class="cv-entry-date">[Start] — [End]</span>
+      </div>
+      <p class="cv-entry-org">Coding Giants</p>
+      <ul class="cv-entry-points">
+        <li>[Responsibility or achievement — keep to one strong line each]</li>
+        <li>[Responsibility or achievement]</li>
+        <li>[Responsibility or achievement]</li>
+      </ul>
+    </article>
+
+    <article class="cv-entry">
+      <div class="cv-entry-head">
+        <h3 class="cv-entry-title">[Role Title]</h3>
+        <span class="cv-entry-date">[Start] — [End]</span>
+      </div>
+      <p class="cv-entry-org">[Company / Studio]</p>
+      <ul class="cv-entry-points">
+        <li>[Responsibility or achievement]</li>
+        <li>[Responsibility or achievement]</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="cv-block">
+    <p class="section-label">FIG. 03 — EDUCATION</p>
+
+    <article class="cv-entry">
+      <div class="cv-entry-head">
+        <h3 class="cv-entry-title">MSc, Game Design &amp; 3D Animation</h3>
+        <span class="cv-entry-date">[Start] — Present</span>
+      </div>
+      <p class="cv-entry-org">DSW Wrocław</p>
+    </article>
+
+    <article class="cv-entry">
+      <div class="cv-entry-head">
+        <h3 class="cv-entry-title">BSc, Computer Games Development</h3>
+        <span class="cv-entry-date">[Start] — [End]</span>
+      </div>
+      <p class="cv-entry-org">PJAIT — Polish-Japanese Academy of Information Technology</p>
+    </article>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="cv-block">
+    <p class="section-label">FIG. 04 — SKILLS</p>
+    <div class="cv-skill-grid">
+      <div>
+        <h3 class="skill-group-title">3D &amp; Art</h3>
+        <p class="cv-skill-line">Blender, Substance Painter, UV Unwrapping, PBR Texturing, Rigging &amp; Animation</p>
+      </div>
+      <div>
+        <h3 class="skill-group-title">Engine &amp; Systems</h3>
+        <p class="cv-skill-line">Unreal Engine 5, Blueprint Visual Scripting, MetaHuman, MakeHuman</p>
+      </div>
+      <div>
+        <h3 class="skill-group-title">Pipeline &amp; Tools</h3>
+        <p class="cv-skill-line">Git, Perforce, Python (bmesh), FBX Pipeline</p>
+      </div>
+      <div>
+        <h3 class="skill-group-title">Languages</h3>
+        <p class="cv-skill-line">Polish (native), English (professional working)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED PROJECTS -->
+  <section class="cv-block">
+    <p class="section-label">FIG. 05 — SELECTED PROJECTS</p>
+    <ul class="cv-project-list">
+      <li><strong>Toyshift</strong> — UE5 fantasy side-scroller, character rigging &amp; transformation systems.</li>
+      <li><strong>SPLICE</strong> — first-person cyberpunk UE5 prototype, five-class Blueprint architecture.</li>
+      <li><strong>Dobrava: Tales of Slavic Myths</strong> — mid-poly open-world RPG, bachelor's thesis.</li>
+    </ul>
+    <p class="cv-portfolio-pointer">Full case studies: <a href="index.html#work">portfolio → Work</a></p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <span>© <span id="year"></span> Paweł — 3D Art &amp; UE5 Development</span>
+  <span class="footer-mark">CV_TEMPLATE_V1</span>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  document.getElementById('print-btn').addEventListener('click', function(e){
+    e.preventDefault();
+    window.print();
+  });
+</script>
+</body>
+</html>

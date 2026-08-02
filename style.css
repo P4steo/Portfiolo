@@ -1,0 +1,404 @@
+/* ============================================
+   TOKENS
+   ============================================ */
+:root{
+  --bg: #12141a;
+  --bg-panel: #1a1d25;
+  --ink: #e9e7e0;
+  --ink-dim: #8b93a1;
+  --line: #2a2e38;
+  --cyan: #6ee7de;
+  --amber: #f2a154;
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --gutter: clamp(1.5rem, 5vw, 4rem);
+  --max-w: 1100px;
+}
+
+*{ box-sizing: border-box; }
+
+html{ scroll-behavior: smooth; }
+
+body{
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a{ color: inherit; text-decoration: none; }
+
+ul{ list-style: none; margin: 0; padding: 0; }
+
+h1, h2, h3{ font-family: var(--font-display); margin: 0; }
+
+/* ============================================
+   BLUEPRINT GRID BACKGROUND (signature element)
+   ============================================ */
+.grid-overlay{
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(110,231,222,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(110,231,222,0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 100% 60% at 50% 0%, black 0%, transparent 75%);
+}
+
+/* ============================================
+   LAYOUT SHELL
+   ============================================ */
+main, header, footer{
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+/* ============================================
+   HEADER / NAV
+   ============================================ */
+.site-header{
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 1rem;
+}
+
+.nav-mark{
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--cyan);
+}
+
+.nav-links{
+  display: flex;
+  gap: 1.75rem;
+}
+
+.nav-links a{
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-dim);
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover{ color: var(--ink); }
+
+.corner{
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--line);
+  z-index: 0;
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero{
+  padding-top: clamp(3rem, 10vw, 7rem);
+  padding-bottom: clamp(3rem, 8vw, 5rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow{
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--amber);
+  margin: 0 0 1.25rem;
+}
+
+.hero-title{
+  font-size: clamp(2.4rem, 7vw, 4.5rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+.hero-title-sub{
+  display: block;
+  color: var(--ink-dim);
+  font-weight: 500;
+}
+
+.hero-lede{
+  max-width: 46ch;
+  margin-top: 1.75rem;
+  color: var(--ink-dim);
+  font-size: 1.05rem;
+}
+
+.hero-meta{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.meta-item{
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.meta-label{
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-dim);
+  text-transform: uppercase;
+}
+
+/* ============================================
+   SECTION LABELS (shared)
+   ============================================ */
+.section-label{
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--amber);
+  margin: 0 0 0.75rem;
+}
+
+.section-title{
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+
+/* ============================================
+   SKILLS
+   ============================================ */
+.skills{
+  padding-top: clamp(3rem, 8vw, 5rem);
+  padding-bottom: clamp(3rem, 8vw, 5rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.skill-groups{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
+}
+
+.skill-group-title{
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--cyan);
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.skill-tags{
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.skill-tags li{
+  font-size: 0.95rem;
+  padding-left: 1rem;
+  position: relative;
+  color: var(--ink);
+}
+
+.skill-tags li::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border: 1px solid var(--cyan);
+  transform: rotate(45deg);
+}
+
+/* ============================================
+   WORK / PROJECTS
+   ============================================ */
+.work{
+  padding-top: clamp(3rem, 8vw, 5rem);
+  padding-bottom: clamp(3rem, 8vw, 5rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.project-list{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.project{
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (max-width: 720px){
+  .project{ grid-template-columns: 1fr; }
+}
+
+/* the "viewport frame" replaces a thumbnail image with a linked technical frame */
+.project-viewport{
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border: 1px dashed var(--line);
+  background:
+    linear-gradient(rgba(110,231,222,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(110,231,222,0.04) 1px, transparent 1px);
+  background-size: 16px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.project-viewport:hover{
+  border-color: var(--cyan);
+  background-color: rgba(110,231,222,0.03);
+}
+
+.viewport-corner{
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--ink-dim);
+}
+.viewport-corner.tl{ top: -1px; left: -1px; border-width: 1px 0 0 1px; }
+.viewport-corner.tr{ top: -1px; right: -1px; border-width: 1px 1px 0 0; }
+.viewport-corner.bl{ bottom: -1px; left: -1px; border-width: 0 0 1px 1px; }
+.viewport-corner.br{ bottom: -1px; right: -1px; border-width: 0 1px 1px 0; }
+
+.viewport-id{
+  position: absolute;
+  top: 0.6rem;
+  left: 0.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-dim);
+}
+
+.viewport-link{
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--cyan);
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--cyan);
+}
+
+.viewport-link:hover{
+  background: var(--cyan);
+  color: var(--bg);
+}
+
+.project-title{
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-desc{
+  color: var(--ink-dim);
+  max-width: 60ch;
+  font-size: 0.98rem;
+}
+
+.project-tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.project-tags li{
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  color: var(--ink-dim);
+  border: 1px solid var(--line);
+  padding: 0.3rem 0.6rem;
+}
+
+/* ============================================
+   CONTACT
+   ============================================ */
+.contact{
+  padding-top: clamp(3rem, 8vw, 5rem);
+  padding-bottom: clamp(3rem, 8vw, 5rem);
+}
+
+.contact-lede{
+  max-width: 50ch;
+  color: var(--ink-dim);
+  margin-bottom: 2rem;
+}
+
+.contact-links{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contact-link{
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  border: 1px solid var(--line);
+  padding: 0.7rem 1.2rem;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.contact-link:hover{
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-dim);
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+a:focus-visible,
+button:focus-visible{
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+}
