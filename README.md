@@ -4,7 +4,7 @@ Hi, I'm Paweł. I model, texture and rig assets in Blender and Substance Painter
 
 This repo is the source for my portfolio — projects, skills, and a proper CV, all in one place.
 
-### → [View the portfolio](https://p4steo.github.io/Portfiolo/index.html)
+### → [View the portfolio](https://p4steo.github.io/Portfolio/index.html)
 
 **Get in touch:** [beigerpawel@gmail.com](mailto:beigerpawel@gmail.com) · [LinkedIn](https://linkedin.com/in/pawelbeiger) · [ArtStation](https://artstation.com/actorn) · [GitHub](https://github.com/P4steo)
 
