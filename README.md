@@ -1,37 +1,11 @@
-# Portfolio
+# Paweł Beiger — 3D Artist & UE5 Blueprint Developer
 
-Statyczna strona portfolio: HTML + CSS + JS, bez buildu, bez zależności.
+Hi, I'm Paweł. I model, texture and rig assets in Blender and Substance Painter, then wire them into playable worlds using Unreal Engine 5's Blueprint system. Based in Gdańsk, Poland, currently finishing an MSc in Game Design & 3D Animation at DSW Wrocław.
 
-## Struktura
+This repo is the source for my portfolio — projects, skills, and a proper CV, all in one place.
 
-- `index.html` — strona główna: hero, skille, projekty (link + opis zamiast zdjęcia), kontakt
-- `cv.html` — gotowy szablon CV do wypełnienia (przyciski `[w nawiasach]` do podmiany)
-- `style.css` — style głównej strony
-- `cv.css` — dodatkowe style dla CV (w tym wersja do druku/PDF)
-- `script.js` — drobne interakcje (rok w stopce, podświetlenie aktywnej sekcji w nav)
+### → [View the portfolio](https://p4steo.github.io/Portfiolo/index.html)
 
-## Jak wgrać na GitHub
+**Get in touch:** [beigerpawel@gmail.com](mailto:beigerpawel@gmail.com) · [LinkedIn](https://linkedin.com/in/pawelbeiger) · [ArtStation](https://artstation.com/actorn) · [GitHub](https://github.com/P4steo)
 
-```bash
-cd portfolio
-git init
-git add .
-git commit -m "Initial portfolio"
-git branch -M main
-git remote add origin https://github.com/<twoj-login>/portfolio.git
-git push -u origin main
-```
-
-## Jak włączyć darmowy hosting (GitHub Pages)
-
-1. Wejdź w repo na GitHub → **Settings → Pages**
-2. Source: **Deploy from a branch**
-3. Branch: **main**, folder: **/ (root)**
-4. Zapisz — strona pojawi się pod adresem:
-   `https://<twoj-login>.github.io/portfolio/`
-
-## Co warto podmienić przed publikacją
-
-- Linki `href="#"` przy każdym projekcie → prawdziwe linki (ArtStation, YouTube, itch.io, repo)
-- Dane kontaktowe w `index.html` (`#contact`) i `cv.html` (mail, LinkedIn, ArtStation, GitHub)
-- Treść `[w nawiasach]` w `cv.html` — daty, nazwy stanowisk, konkretne osiągnięcia
+Open to 3D Artist and Game Artist roles.
